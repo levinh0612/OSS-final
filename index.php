@@ -68,7 +68,7 @@
         <ul>
           <li><a class="nav-link scrollto active" href="index.php">Trang chủ</a></li>
           <li><a class="nav-link scrollto" href="about.php">Thông tin SV</a></li>
-          <!-- <li class="dropdown"><span style="color:white">Laptop</span> <i class="bi bi-chevron-down" style="color:white"></i>
+          <li class="dropdown"><span style="color:white">Laptop</span> <i class="bi bi-chevron-down" style="color:white"></i>
             <ul>
               <li><a href="laptop.php?controller=laptop&action=filterL&key=vp">Laptop văn phòng</a></li>
               <li class="dropdown"><a href="laptop.html"><span>Thương hiệu</span> <i class="bi bi-chevron-right"></i></a>
@@ -83,7 +83,7 @@
               </li>
               <li><a href="laptop.php?controller=laptop&action=filterL&key=gm">Laptop gaming</a></li>
             </ul>
-          </li> -->
+          </li>
 
           <li class="dropdown"><a href="acc.html"><span>Tài khoản</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
