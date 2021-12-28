@@ -1,5 +1,4 @@
 <?php
-include './config.php';
 class Db{
     protected static $pdo;
     function __construct()
