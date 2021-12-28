@@ -1,0 +1,354 @@
+* {
+    margin :0;
+    padding :0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    line-height: 24px;
+}
+
+:root {
+  --primary-color: #00a862;
+  --second-color:#000000;
+  --third-color:#ffffff;
+  --fourth-color:#00754a;
+}
+
+.marginBot32 {
+    margin: 32px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.left {
+    text-align: left;
+}
+
+.center {
+    text-align: center;
+}
+
+h4 {
+    color: var(--primary-color);
+}
+
+.borderRed {
+    border: 2px solid red;
+}
+
+.invalid {
+    outline: red;
+    color: red;
+}
+
+/* signIn */
+
+.container {
+    text-align: center;
+    margin: 32px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column  ;
+}
+
+.signIn, .signUp {
+    position: relative;
+    margin: 32px 0 0  0 ;
+    width: 500px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 32px;
+    border-radius: 8px;
+}
+
+.form__label {
+    position: absolute;
+    transform: translateY(-48px);
+    left: 58px;
+    user-select: none;
+    pointer-events: none;
+    transition: 0.25s ease;
+  
+}
+
+.formGroup input:not(:placeholder-shown) + .form__label , .formGroup input:focus + .form__label{
+    transform: translateY(-70px);
+    background-color: var(--third-color);
+    left:48px;
+    padding: 0 10px;
+    color: var(--primary-color);
+}
+
+.formGroup input {
+    width: 97%;
+    padding:10px 16px ;
+    border-radius: 8px;
+    margin: 12px 24px 12px 8px;
+    border: 2px solid rgba(207, 207, 207, 1);
+    outline: none;
+    transition: 0.25s ease;
+}
+
+.formGroup input:focus {
+    border: 2px solid var(--primary-color) ;
+}
+
+.options {
+    text-align: left;
+    padding: 16px 16px 0 6px;
+}
+
+.options__savePass {
+    position: relative;
+    padding: 0 0 4px 0;
+    margin: 0 0 4px 0;
+}
+
+.options__savePass label{
+    position: absolute;
+    margin: 10px 0 0 8px;
+    cursor: pointer;
+}
+
+/* custom checkbox */
+#keepMe, #yesIlike, #agree {
+    cursor: pointer;
+    -webkit-appearance: none;
+	background-color: var(--third-color);
+	border: 2px solid var(--fourth-color);
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+	padding: 12px;
+	border-radius: 5px;
+	display: inline-block;
+	position: relative;
+    transition: 0.25 ease;
+    margin: 8px 0 0 0;
+}
+#keepMe:active, #keepMe:checked:active, 
+#agree:active, #agree:checked:active,
+#yesIlike:active, #yesIlike:checked:active {
+    transition: 0.25 ease;
+
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+#keepMe:checked, #agree:checked, #yesIlike:checked {
+    transition: 0.25 ease;
+
+	background-color: var(--fourth-color);
+	border: 2px solid var(--fourth-color);
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+	color: var(--fourth-color);
+}
+
+#keepMe:checked:after,
+#agree:checked:after,
+#yesIlike:checked:after {
+	content: '\2714';
+	font-size: 20px;
+	position: absolute;
+	top: 2px;
+	left: 3px;
+	color: var(--third-color);
+    transition: 0.25 ease;
+}
+/* end custom checkbox */
+
+a {
+    color: var(--fourth-color);
+}
+
+ .signIn #btn--signIn,
+ .signUp #btn--signUp {
+    margin: 16px 0 0 0;
+    padding: 12px 75px;
+    background-color: var(--primary-color);
+    color:#fff;
+    font-weight: bold;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    border-radius: 28px;
+    cursor: pointer;
+}
+
+.signUp--move {
+    margin:16px 0 0 0;
+    width: 500px;
+    padding: 32px;
+    background-color:#d4e9e2;
+    border-radius:12px;
+    color:#000000;
+    line-height:24px;
+    padding:32px 56px;
+}
+
+.signUp--move h3 {
+    /* margin: 32px 71px; */
+    margin: 32px 71px 0 71px;
+    padding: 12px 50px;
+    background-color:var(--third-color) ;
+    color:rgb(1, 0, 0);
+    font-weight: bold;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    border-radius: 28px;
+}
+
+.signUp--move a {
+    text-decoration: none;
+}
+
+/* end signIn */
+
+/* signUp */
+.signUp__title {
+    max-width: 500px;
+}
+
+.signUp__title  h4 {
+   margin: 56px 0 20px 0;
+}
+
+.signUp {
+
+}
+
+
+.signUp h4 {
+    text-align: left;
+    margin: 30px 0 20px 0;
+}
+
+#agree {
+    width: auto;
+    margin: 0 0 0 8px;
+}
+
+.formGroup {
+    min-height: 95px;
+}
+
+.formGroup #agree span {
+    color: var(--second-color) ;
+    
+}
+
+.specSpan {
+    position: absolute;
+    margin: 2px 0 8px 8px;
+    cursor: pointer;
+}
+
+#spec .errorMess {
+    margin-top: 20px;
+}
+
+.formGroup .errorMess {
+  display: block;
+  text-align: left;
+  margin:0 0 0 24px;
+}
+
+/* end signUp */
+
+
+/* Reponsive */
+@media only screen and (max-width:600px) {
+    /* mobile */
+
+    body {
+        font-size: 12.5px;
+    }
+
+    .signUp__title  h4 {
+   margin: 20px 0 20px 0;
+}
+
+    .signIn, .signUp {
+        width: 320px;
+    }
+
+    .signUp__title {
+        max-width: 320px;
+    }
+
+    .signUp--move {
+        width: 320px;
+        padding: 16px 32px;
+    }
+
+    .signUp--move  h3 {
+        margin: 12px;
+    }
+
+    .options {
+        padding: 4px 16px 0 6px;
+    }
+
+    .signUp h4 {
+        text-align: left;
+        margin: 0 0 0 0;
+    }
+
+    /*  */
+    .formGroup input:not(:placeholder-shown) + .form__label , .formGroup input:focus + .form__label{
+    transform: translateY(-62px);
+    background-color: var(--third-color);
+    left:48px;
+    padding: 0 10px;
+    color: var(--primary-color);
+}
+
+.formGroup input {
+    width: 97%;
+    padding:4px 16px ;
+    border-radius: 8px;
+    margin: 12px 24px 12px 8px;
+    border: 2px solid rgba(207, 207, 207, 1);
+    outline: none;
+    transition: 0.25s ease;
+}
+
+.form__label {
+    position: absolute;
+    transform: translateY(-42px);
+    left: 58px;
+    user-select: none;
+    pointer-events: none;
+    transition: 0.25s ease;
+
+}
+
+/* tablet */
+@media only screen and (min-width:610px) and ( max-width: 992px) {
+    
+    body {
+        font-size: 15px;
+    }
+
+    .signUp {
+        
+    }
+
+    .signUp h4 {
+        margin: 14px 0 12px 0;
+    }
+
+    #agree {
+        margin: 4px 0 4px 8px;
+;
+    }
+    .signIn #btn--signIn, .signUp #btn--signUp {
+        padding: 12px 120px;
+    }
+
+    .formGroup #agree span {
+        color:red
+    }
+    
+}
+
+/* end Reponsive */
