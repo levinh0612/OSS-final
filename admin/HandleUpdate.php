@@ -16,7 +16,7 @@ if($_FILES['img']['name']!=null) {
 }
 $sql = "UPDATE laptop SET ten=?, gia=?,hinh=?,mota=?, loai=?, thuonghieu=? WHERE ma=?";
 
-$arr=[$t,$g,$img,$mt,$l,$th];
+$arr=[$t,$g,$img,$mt,$l,$th,$m];
 // print_r($arr);
 // exit();
 $stm = $objPDO->prepare($sql);
