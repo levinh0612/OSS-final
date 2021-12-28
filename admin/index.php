@@ -209,7 +209,7 @@ $dataLaptop = $objStatement->fetchAll(PDO::FETCH_ASSOC);
                     <td><?php echo $row['hinh'] ?></td>
                     <td><?php echo $row['loai'] ?></td>
                     <td><?php echo $row['thuonghieu'] ?></td>
-                    <td><?php echo $row['motaa']?></td>
+                    <td><?php echo $row['mota']?></td>
                     <td>
                         <a class="btn btn-info" href="update.php?ma=<?php echo $row['ma'] ?>">Sửa</a>
                         <a class="btn btn-danger" href="delete.php?ma=<?php echo $row['ma'] ?>">Xóa</a>
