@@ -8,7 +8,7 @@ if ($ma !='')
 {
     $sql ='delete from laptop where ma =?';
     $arr =[$ma];
-    /* $objStatement =$objPDO->prepare($sql); */
+    $objStatement =$objPDO->prepare($sql);
     $objStatement->execute($arr);
     $n = $objStatement->rowCount();
   //  echo "Da xoa $n cuon sach";
