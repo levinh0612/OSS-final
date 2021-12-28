@@ -1,5 +1,5 @@
 <?php
-include "./config.php";
+include './config.php';
 class Db{
     protected static $pdo;
     function __construct()
@@ -26,3 +26,4 @@ class Db{
     }
 }
 
+?>

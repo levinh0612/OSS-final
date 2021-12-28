@@ -1,5 +1,5 @@
 <?php
-define('HOST', 'localhost');
+define('HOST', 'localhost:3307');
 define('DB', 'laptopstore');
 define('USER', 'root');
 define('PW', '');
