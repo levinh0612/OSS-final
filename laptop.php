@@ -157,8 +157,8 @@
           <?php
             $v= isset($_GET['kw'])? $_GET['kw'] : '';
             ?>
-  <!-- phat hien loi -->
-              <h1> <?php echo $_GET['kw'] ?></h1>
+
+              <h1> <?php echo $v ?></h1>
             <?php
 
           ?>
