@@ -40,18 +40,16 @@ class Laptop extends Db
         return $data[0];
     }
     function dsL($id) {
-         $data = $this->selectQuery('select * from laptop where loai like ?', [$id]);
-        return $data->fetchAll();
-        // $s ='select * from laptop where loai like ? ';
-        // $a =["%$id%"];
-        // return $this->selectQuery($s, $a);
+
+        $s ='select * from laptop where loai like ? ';
+        $a =["%$id%"];
+        return $this->selectQuery($s, $a);
     }
     function dsTH($id) {
-        $data = $this->selectQuery('select * from laptop where thuonghieu like ?', [$id]);
-        return $data->fetchAll();
-        // $s ='select * from laptop where thuonghieu like ?';
-        // $a =["%$id%"];
-        // return $this->selectQuery($s, $a);
+
+        $s ='select * from laptop where thuonghieu like ?';
+        $a =["%$id%"];
+        return $this->selectQuery($s, $a);
     }
 
     // function panigation()
