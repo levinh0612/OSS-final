@@ -24,7 +24,7 @@ if($_FILES['img']['error']==0) {
   // echo URL_BOOK."/$img";
   move_uploaded_file($_FILES['img']['tmp_name'],URL_BOOK."/$img");
 }
-$sql = "INSERT INTO laptop ( ma, ten, gia,hinh,mota, loai, thuonghieu) VALUES (?, ? ,? ,? ,? ,?)";
+$sql = "INSERT INTO laptop ( ma, ten, gia,hinh,mota, loai, thuonghieu) VALUES (?, ? ,? ,? ,? ,?,?)";
 
 $arr=[$m,$t,$g,$img,$mt,$l,$th];
 // print_r($arr);
