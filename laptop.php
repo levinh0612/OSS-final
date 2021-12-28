@@ -1,5 +1,5 @@
 <?php
-    include 'config.php';
+
     function loadClass($className)
     {
         if (is_file("models/$className.php"))
@@ -246,7 +246,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
 </body>
 
 </html>
+<!-- Le minh tu đã check -->
