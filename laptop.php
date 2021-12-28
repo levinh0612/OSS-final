@@ -1,5 +1,5 @@
 <?php
-    // include 'config.php';
+
     function loadClass($className)
     {
         if (is_file("models/$className.php"))
