@@ -127,14 +127,14 @@
         <button class ="img-seach-menu" onclick="document.getElementById('modal-search').style.display='block'" ><i class="bi bi-search img-search-menu"></i></button>
           <div id ="modal-search" class="search-modal">
             <span onclick="document.getElementById('modal-search').style.display='none'"class="close" title="Close Modal">&times;</span>
-          <!-- <form action='laptop.php' method='get'>
+          <form action='laptop.php' method='get'>
             <input type="hidden"  name='controller' value='laptop'>
             <input type="hidden"  name='action' value='search'>
               <input type="text" class="search-text" placeholder="Tìm kiếm tên laptop" name="kw">
                 <button type="submit" class="search-btn">
                    <img class="img-continue-search"src="./assets/img/continue.png">
                 </button>
-          </form> -->
+          </form>
           </div>
       </div>
     </div>
