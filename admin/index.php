@@ -222,4 +222,4 @@ $dataLaptop = $objStatement->fetchAll(PDO::FETCH_ASSOC);
     </div>
 </body>
 </html>
-<!--  -->
+<!-- LE VINH DA TEST CHUC NANG CRUD -->
