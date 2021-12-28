@@ -1,22 +1,19 @@
 <?php
-
-
+    include 'config.php';
     function loadClass($className)
     {
-        if (is_file("./models/$className.php")){
-          include "./models/$className.php";
-        }
+        if (is_file("models/$className.php"))
+            include "./models/$className.php";
         else {
             echo 'Err';exit;
         }
     }
 
-      spl_autoload_register('loadClass');
-
-
+    spl_autoload_register('loadClass');
 
     $x= new Db();
     $controller= isset($_GET['controller'])?$_GET['controller']:'laptop';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +22,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Laptop Market | Trang chủ</title>
+ <title>Laptop Market | Laptop</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -35,6 +32,7 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
+
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
@@ -42,19 +40,13 @@
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <link href="./assets/css/style.css" rel="stylesheet">
+
+  <link href="assets/css/style.css" rel="stylesheet">
+
+
 </head>
 
 <body>
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero">
-    <div class="hero-container">
-      <h1>Welcome to LV </h1>
-      <h2>Nơi trao đổi, buôn bán các loại LapTop trong từng phân khúc.</h2>
-      <a href="#about" class="btn-get-started scrollto">Khám phá</a>
-    </div>
-  </section><!-- End Hero -->
 
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center ">
@@ -66,9 +58,9 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="index.php">Trang chủ</a></li>
+          <li><a class="nav-link scrollto " href="index.php">Trang chủ</a></li>
           <li><a class="nav-link scrollto" href="about.php">Thông tin SV</a></li>
-          <!-- <li class="dropdown"><span style="color:white">Laptop</span> <i class="bi bi-chevron-down" style="color:white"></i>
+          <li class="dropdown"><a class ="nav-link scrollto active" href="laptop.html"><span>Laptop</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="laptop.php?controller=laptop&action=filterL&key=vp">Laptop văn phòng</a></li>
               <li class="dropdown"><a href="laptop.html"><span>Thương hiệu</span> <i class="bi bi-chevron-right"></i></a>
@@ -83,7 +75,7 @@
               </li>
               <li><a href="laptop.php?controller=laptop&action=filterL&key=gm">Laptop gaming</a></li>
             </ul>
-          </li> -->
+          </li>
 
           <li class="dropdown"><a href="acc.html"><span>Tài khoản</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
@@ -127,167 +119,52 @@
         <button class ="img-seach-menu" onclick="document.getElementById('modal-search').style.display='block'" ><i class="bi bi-search img-search-menu"></i></button>
           <div id ="modal-search" class="search-modal">
             <span onclick="document.getElementById('modal-search').style.display='none'"class="close" title="Close Modal">&times;</span>
-          <!-- <form action='laptop.php' method='get'>
+          <form action='laptop.php' method='get'>
             <input type="hidden"  name='controller' value='laptop'>
             <input type="hidden"  name='action' value='search'>
               <input type="text" class="search-text" placeholder="Tìm kiếm tên laptop" name="kw">
                 <button type="submit" class="search-btn">
                    <img class="img-continue-search"src="./assets/img/continue.png">
                 </button>
-          </form> -->
+          </form>
           </div>
       </div>
     </div>
   </header><!-- End Header -->
 
+
   <main id="main">
 
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
       <div class="container">
 
-        <div class="section-title">
-          <h2>Về Laptop Market</h2>
-        </div>
-
-        <div class="row content">
-          <div class="col-lg-6">
-            <img src="./assets/img/your-logo.png" class="img-about" alt="">
-            <p>
-              Nhờ vào Laptop Market, bạn có thể:
-            </p>
-            <ul>
-              <li><i class="ri-check-double-line"></i> Giao lưu trong thế giới Laptop.</li>
-              <li><i class="ri-check-double-line"></i> Mua Laptop với giá cả phải chăng trong từng phân khúc.</li>
-              <li><i class="ri-check-double-line"></i> Bán Laptop nhanh và cực kỳ dễ dàng trong vài nốt nhạc.</li>
-            </ul>
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0">
-            <p>
-              Mục tiêu của Laptop Market là sẽ trở thành thị trường mua bán Laptop trực tuyến hàng đầu Việt Nam. Mục đích
-              của trang web là cho phép người mua và người bán kết nối và giao dịch an toàn, dễ dàng trong một
-              môi trường tiện lợi và rõ ràng.
-            </p>
-            <p>
-              Tất cả các hạng mục đều có trên trang web của chúng tôi, cho dù nó là dành cho mua, bán,
-               tìm kiếm Laptop. Mục đích của chúng tôi là cung cấp cho người Việt Nam một nền tảng trực tuyến để
-                sử dụng một cách đơn giản, tiện lợi, không rắc rối phức tạp. Không cần phải đăng ký và ai
-                 cũng có thể tìm kiếm và đăng các thông tin liên quan về các danh mục sản phẩm cần bán khác
-                 nhau, từ Laptop mới, cũ, 99% và còn nhiều hơn nữa.
-            </p>
-            <a href="#" class="btn-learn-more">Chi tiết...</a>
-          </div>
-        </div>
-
+        <ol>
+          <li><a href="index.php">Home</a></li>
+          <li>Laptop</li>
+        </ol>
+        <h2>Laptop</h2>
       </div>
-    </section><!-- End About Section -->
+    </section><!-- End Breadcrumbs -->
 
-    <!-- ======= Our Values Section ======= -->
-    <section id="our-values" class="our-values">
+    <section class="inner-page">
       <div class="container">
-
-        <div class="row">
-          <div class="col-md-6 d-flex align-items-stretch">
-            <div class="card" style='background-image: url("assets/img/our-values-1.jpg");'>
-              <div class="card-body">
-                <h5 class="card-title"><a href="">Nhiệm vụ</a></h5>
-                <p class="card-text">Giúp các bạn mua bán Laptop dễ dàng và nhanh chóng.</p>
-                <div class="read-more"><a href="#"><i class="bi bi-arrow-right"></i> Donate</a></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-            <div class="card" style='background-image: url("assets/img/our-values-2.jpg");'>
-              <div class="card-body">
-                <h5 class="card-title"><a href="">Kế hoạch tương lai</a></h5>
-                <p class="card-text">Phát triển thị trường Laptop Market ra toàn quốc.</p>
-                <div class="read-more"><a href="#"><i class="bi bi-arrow-right"></i> Donate</a></div>
-              </div>
-            </div>
-
-          </div>
-          <div class="col-md-6 d-flex align-items-stretch mt-4">
-            <div class="card" style='background-image: url("assets/img/our-values-3.jpg");'>
-              <div class="card-body">
-                <h5 class="card-title"><a href="">Đăng tin</a></h5>
-                <p class="card-text">Bạn có thể đăng thông tin của 1 chiếc Laptop để bán 1 cách nhanh chóng.</p>
-                <div class="read-more"><a href="#"><i class="bi bi-arrow-right"></i> Chi tiết...</a></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 d-flex align-items-stretch mt-4">
-            <div class="card" style='background-image: url("assets/img/our-values-4.jpg");'>
-              <div class="card-body">
-                <h5 class="card-title"><a href="">Mua Laptop</a></h5>
-                <p class="card-text">Bạn có thể tìm kiếm sản phầm và mua chúng chỉ bằng 1 cú click.</p>
-                <div class="read-more"><a href="#"><i class="bi bi-arrow-right"></i> Chi tiết...</a></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Our Values Section -->
-
-    <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio">
       <div class="container">
 
         <div class="section-title">
-          <h2>Danh sách laptop</h2>
-                      <!-- ======= Clients Section ======= -->
-            <section id="clients" class="clients section-bg">
-              <div class="container">
+          <h2>Kết quả tìm kiếm</h2>
+          <?php
+            $v= isset($_GET['kw'])? $_GET['kw'] : '';
+            ?>
 
-                <div class="row">
+              <h1> <?php echo $v ?></h1>
+            <?php
 
-                  <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <img src="assets/img/made/apple.png" class="img-fluid" alt="">
-                  </div>
+          ?>
 
-                  <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <img src="assets/img/made/MSI.png" class="img-fluid" alt="">
-                  </div>
-
-                  <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <img src="assets/img/made/HP.png" class="img-fluid" alt="">
-                  </div>
-
-                  <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <img src="assets/img/made/asus.png" class="img-fluid" alt="">
-                  </div>
-
-                  <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <img src="assets/img/made/acer.png" class="img-fluid" alt="">
-                  </div>
-
-                  <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <img src="assets/img/made/dell.png" class="img-fluid" alt="">
-                  </div>
-
-                </div>
-              </div>
-            </section><!-- End Clients Section -->
-
-          <p>Tại <a href="index.php">Laptop Market</a> bạn có thể tìm thấy được những chiếc Laptop xịn xò thuộc những thương hiệu lớn.</p>
+          <p>Tại <a href="./index.php">Laptop Market</a> bạn có thể tìm thấy được những chiếc Laptop xịn xò thuộc những thương hiệu lớn.</p>
         </div>
-
-          <ul id="portfolio-flters" class="d-flex justify-content-center">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-MSI">MSI</li>
-            <li data-filter=".filter-Acer">Acer</li>
-            <li data-filter=".filter-Asus">Asus</li>
-            <li data-filter=".filter-Apple">Apple</li>
-            <li data-filter=".filter-Dell">Dell</li>
-            <li data-filter=".filter-HP">HP</li>
-          </ul>
-           <ul id="portfolio-flters" class="d-flex justify-content-center">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-Thường">Văn phòng</li>
-            <li data-filter=".filter-Gaming">Gaming</li>
-
-          </ul>
-
           <div class="row portfolio-container">
 
             <?php
@@ -303,18 +180,9 @@
 
       </div>
     </section><!-- End Portfolio Section -->
-
-
-
-
-
-
-
-
-
-
-<!-- ======= Team Section ======= -->
-
+        </p>
+      </div>
+    </section>
 
   </main><!-- End #main -->
 
